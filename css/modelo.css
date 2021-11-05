@@ -1,41 +1,38 @@
-.logo{
-    width: 230px;
+.logo {
+  width: 230px;
 }
 
-.estiloNav{
-    background-color: #FFAA00;
-    font-size: 1.3rem;
-
+.estiloNav {
+  background-color: #ffaa00;
+  font-size: 1.3rem;
 }
 
-.nav-link{
-    color: #1755B3 ;
-
+.nav-link {
+  color: #1755b3;
 }
-.nav-link:hover{
-    color: #fff;
+.nav-link:hover {
+  color: #fff;
 }
-.navbar-toggler:focus{
-    text-decoration: none;
-    outline: 0;
-    box-shadow: none;
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
 }
-.icons2{
-
-    font-size: 2rem;
-    color:#1755B3;
+.icons2 {
+  font-size: 2rem;
+  color: #1755b3;
 }
-.icons2:hover{
- color: #fff;
+.icons2:hover {
+  color: #fff;
 }
-.icons{
-    font-size: 1.3rem;
-    color:#1755B3
+.icons {
+  font-size: 1.3rem;
+  color: #1755b3;
 }
-.icons:hover{
-    color:#c48200;
+.icons:hover {
+  color: #c48200;
 }
-.btn1{
-    background-color: #3B89ff;
-    color: #fff;
+.btn1 {
+  background-color: #3b89ff;
+  color: #fff;
 }
