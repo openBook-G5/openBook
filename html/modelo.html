@@ -27,11 +27,11 @@
     <title>MODELO</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light estiloNav">
+    <nav class="navbar navbar-expand-lg estiloNav">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.png" ></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list icons2"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -58,11 +58,50 @@
             </li>
            </ul>
           <div class="d-flex">
-            <button class="bi bi-box-arrow-in-right fs-5 m-2 btn btn-primary"> Entrar </button>
+            <button class="bi bi-box-arrow-in-right fs-5 m-2 btn btn1"> Entrar </button>
          </div>
         </div>
       </div>
     </nav>
+
+
+    <!-- Footer -->
+    <div class="container-fluid justify-content-around d-flex">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 text-center px-4">
+            <h5>openBook</h5>
+            <ul class="nav flex-column mb-4">
+              <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="quemSomos.html" class="nav-link p-0 text-muted">Quem somos nós?</a></li>
+              <li class="nav-item mb-2"><a href="meusFavoritos.html" class="nav-link p-0 text-muted">Meus Favoritos</a></li>
+              <li class="nav-item mb-2"><a href="livrosDisponiveis.html" class="nav-link p-0 text-muted">Livros</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Politica de Privacidade</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+            <form>
+              <h5>Inscreva-se para receber a nossa newsletter</h5>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="exemplo@mail.com">
+                <button class="btn btn1" type="button">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2021 openBook. Todos os direitos reservados.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark bi bi-facebook icons" href="#"></a></li>
+            <li class="ms-3"><a class="link-dark bi bi-instagram icons" href="#"></a></li>
+            <li class="ms-3"><a class="link-dark bi bi-whatsapp icons" href="#"></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
     <!--JS e JQuery do Bootstrap-->
     <script
