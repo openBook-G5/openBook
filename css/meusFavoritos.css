@@ -36,3 +36,34 @@
   background-color: #3b89ff;
   color: #fff;
 }
+.btn2 {
+  background-color: #fff;
+  border: 1px solid #3b89ff;
+  color: #3b89ff;
+}
+
+.span_class{
+  background-color: #ffaa00;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+}
+.input_item{
+  height: 3rem;
+  font-size: 1.1rem;
+}
+h3{
+  color: #032A66;
+}
+#tabela{
+  border-bottom:1px solid #1755b3;  
+}
+th{
+  color: #032A66;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.tabela_cabecalho{
+  border-top: 3px dashed #ffaa00;
+  border-bottom: 2px #ffaa00;
+}
