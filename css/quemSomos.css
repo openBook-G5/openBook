@@ -7,7 +7,8 @@
   font-size: 1.3rem;
 }
 
-.nav-link {
+.nav-link,
+.tituloAzul {
   color: #1755b3;
 }
 .nav-link:hover {
@@ -32,7 +33,23 @@
 .icons:hover {
   color: #c48200;
 }
+.iconsProjetos {
+  font-size: 1rem;
+  color: #1755b3;
+}
+.iconsProjetos:hover {
+  color: #c48200;
+}
 .btn1 {
   background-color: #3b89ff;
   color: #fff;
+}
+
+hr {
+  font-size: 3px;
+  color: #c48200;
+}
+#animation {
+  width: 100px;
+  height: 100px;
 }
