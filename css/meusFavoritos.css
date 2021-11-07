@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+
+/* Toda a página recebe a fonte roboto */
+*{
+  font-family: 'roboto';
+}
+
+/* Estilização da nav e do footer */
 .logo {
   width: 230px;
 }
@@ -10,28 +18,70 @@
 .nav-link {
   color: #1755b3;
 }
+
 .nav-link:hover {
   color: #fff;
 }
+
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: none;
 }
+
+/* Ícones das redes sociais no footer */
+.icons{
+  font-size: 1.3rem;
+  color: #1755b3;
+}
+
+.icons:hover {
+  color: #c48200;
+}
+
+/* Ícone do menu-hamburguer */
 .icons2 {
   font-size: 2rem;
   color: #1755b3;
 }
+
 .icons2:hover {
   color: #fff;
 }
-.icons {
-  font-size: 1.3rem;
+
+/* Ícone dos botões de ação */
+.icons3{
+  padding: 0;
+  margin-right: 5px;
+  font-size: 1.4rem;
   color: #1755b3;
 }
-.icons:hover {
+
+.icons3:hover {
   color: #c48200;
 }
+
+/* Ícone das estrelas */
+.yellowStar {
+  padding: 0;
+  font-size: 1.2rem;
+  color:#ffaa00;
+}
+
+.yellowStar:hover {
+  color: #c48200;
+}
+/* Ícone das estrelas */
+.grayStar {
+  padding: 0;
+  font-size: 1.2rem;
+  color:#b8b8b8;
+}
+
+.grayStar:hover {
+  color: #949494;
+}
+
 .btn1 {
   background-color: #3b89ff;
   color: #fff;
@@ -42,28 +92,57 @@
   color: #3b89ff;
 }
 
-.span_class{
-  background-color: #ffaa00;
-  color: white;
-  font-weight: bold;
-  font-size: small;
+/* Estilização da main */
+main{
+  margin: auto;
+  width: 85%;
 }
-.input_item{
-  height: 3rem;
-  font-size: 1.1rem;
-}
-h3{
+
+p{
+  text-align: justify;
   color: #032A66;
 }
+
+#ratingStar{
+  font-size:1.05rem;
+}
+
+.span_class{
+  padding: 10px 5px;
+  background-color: #ffaa00;
+  color: white;
+  font-weight: bolder;
+  font-size:small;
+}
+
+.input_item{
+  font-size: 1.1rem;
+}
+
+h1{
+  color: #1755b3;
+}
+
 #tabela{
   border-bottom:1px solid #1755b3;  
 }
+
+.tabela_cabecalho{
+  border-top: 3px dashed #ffaa00;
+  border-bottom: 2px #ffaa00;
+}
+
 th{
   color: #032A66;
   font-weight: bolder;
   font-size: 1.2rem;
 }
-.tabela_cabecalho{
-  border-top: 3px dashed #ffaa00;
-  border-bottom: 2px #ffaa00;
+
+
+@media screen and (max-width: 768px){
+  main{
+    width: 100%;
+  }
 }
+
+

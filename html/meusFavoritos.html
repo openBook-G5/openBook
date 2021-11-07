@@ -71,27 +71,46 @@
   <!-- CONTEUDO PRINCIPAL -->
   <main>
 
-<section class="container w-75 mt-4 mb-4 text-center">
-  <h3 class="text-center mb-4 fw-bolder">Meus Favoritos</h3>
-  Procurou algum livro e não encontrou? Aqui você pode cadastrar livros que você tem interesse em ler, mas que ainda não estão no nosso site. Assim, saberemos o seu interesse e nos empenharemos em disponibilizá-lo assim que possível!
-</section>
-    <div class="container w-75 input_container py-4">
-      
+    <section id="section_texto" class="container mt-4 mb-4 text-center">
+      <h1 class="text-center mb-4 fw-bolder">Meus Favoritos</h1>
+      <p>Procurou algum livro e não encontrou? Aqui você pode cadastrar livros que você tem interesse em ler, mas que
+        ainda não estão no nosso site. Assim, saberemos o seu interesse e nos empenharemos em disponibilizá-lo assim que
+        possível!</p>
+    </section>
+    <div class="container input_container py-4">
+
       <div class="row mb-3">
 
-        <div class=" col-lg-6 col-md-12 mb-3">
+        <div class=" col-lg-6 col-md-12 mb-4">
           <div class="input-group">
             <span class="input-group-text span_class">Título do Livro</span>
             <input type="text" class="form-control input_item" id="tituloLivro"
-              placeholder="Digite o título do livro que você deseja ler" />
+              placeholder="Digite o título do livro que você deseja ler"
+              title="Digite o título do livro que você deseja ler" />
           </div>
         </div>
 
-        <div class=" col-lg-6 col-md-12 mb-3">
+        <div class=" col-lg-6 col-md-12 mb-4">
           <div class="input-group">
-            <span class="input-group-text span_class ">Autor(a) do livro</span>
+            <span class="input-group-text span_class">Autor(a) do livro</span>
             <input type="text" class="form-control input_item" id="autorLivro"
-              placeholder="Digite o(a) autor(a) do livro que você deseja ler" />
+              placeholder="Digite o(a) autor(a) do livro que você deseja ler"
+              title="Digite o(a) autor(a) do livro que você deseja ler" />
+          </div>
+        </div>
+
+        <div class=" col-lg-7 col-md-12 mb-3 container">
+          <div class="input-group">
+            <span class="input-group-text span_class">Favorite</span>
+            <select id="ratingStar" class="form-select input-group-text input_item" aria-label="Default select example">
+              <option selected id="selected">Favorite o livro de acordo com o seu interesse</option>
+              <!-- Não esquecer de mudar aqui e no JS -->
+              <option value="1">Nem tenho muito interesse</option>
+              <option value="2">Tenho certo interesse</option>
+              <option value="3">Tenho interesse</option>
+              <option value="4">Quero muito ler este livro</option>
+              <option value="5">Quero ler este livro hoje mesmo!</option>
+            </select>
           </div>
         </div>
         <div class="text-end">
@@ -101,19 +120,20 @@
       </div>
     </div>
 
-    <section class="container center w-75 classe_tabela py-4">
-      <table class="table table-responsive table-hover" id="tabela">
+    <section class="container center classe_tabela py-4">
+      <table class="table table-responsive " id="tabela">
 
         <caption>Meus favoritos</caption>
         <thead>
-          <tr class="text-center tabela_cabecalho">
+          <tr class="text-center  tabela_cabecalho">
             <th>Título do Livro</th>
             <th>Autor do Livro</th>
+            <th>Desejômetro</th>
             <th>Ações</th>
           </tr>
         </thead>
 
-        <tbody class="text-center"id="tbody">
+        <tbody class="text-center" id="tbody">
 
         </tbody>
       </table>
@@ -176,6 +196,19 @@
       </div>
     </footer>
   </div>
+
+
+  <!-- Adicionando o VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <!--JS e JQuery do Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

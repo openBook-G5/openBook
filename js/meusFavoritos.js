@@ -6,6 +6,8 @@ class meusFavoritos {
         this.codigo = 1;
         this.titulo = "";
         this.autor = "";
+        this.rating = "";
+        this.conteudo = "";
         this.arrayLivros = [];
 
         this.editCodigo = null;
@@ -19,6 +21,7 @@ class meusFavoritos {
         livro.codigo = this.codigo;
         livro.titulo = document.getElementById("tituloLivro").value;
         livro.autor = document.getElementById("autorLivro").value;
+        livro.rating = document.getElementById('ratingStar').selectedOptions[0].value;
 
         return livro;
     }
@@ -36,6 +39,7 @@ class meusFavoritos {
         }
         this.criarTabela();
         this.cancelar();
+        document.getElementById("selected").setAttribute("checked");
         console.log(this.arrayLivros);
     }
 
@@ -48,10 +52,14 @@ class meusFavoritos {
         if (livro.autor == "") {
             mensagem += "- Informe o(a)  autor(a) do livro! \n";
         }
+        if (livro.rating == "Favorite o livro de acordo com o seu interesse") {
+            mensagem += "- Selecione uma opção! \n";
+        }
         if (mensagem != "") {
             alert(mensagem);
             return false;
         }
+
         return true;
     }
 
@@ -59,9 +67,6 @@ class meusFavoritos {
     adicionar(livro) {
         this.arrayLivros.push(livro);
         this.codigo++;
-
-        /* this.limpar(); */
-        console.log("Bom dia");
     }
 
     /*********************  Função 5 - CRIAR TABELA ***************/
@@ -69,26 +74,116 @@ class meusFavoritos {
         let tbody = document.getElementById("tbody");
         //resetar a lista quando salvar um novo produto
         tbody.innerText = "";
+
+        /* Aqui se criam as novas linhas da tabela */
         for (let i = 0; i < this.arrayLivros.length; i++) {
             let novaLinha = tbody.insertRow();
             let td_titulo = novaLinha.insertCell();
             let td_autor = novaLinha.insertCell();
+            let td_favoritar = novaLinha.insertCell();
             let td_acoes = novaLinha.insertCell();
 
             td_titulo.innerText = this.arrayLivros[i].titulo;
             td_autor.innerText = this.arrayLivros[i].autor;
-            td_acoes.classList.add("center");
 
-            let imgEditar = document.createElement("img");
-            imgEditar.src = "../img/editar.svg"
+            /* Inserir as estrelas no favorito */
+            let imgStar = document.createElement("span");
+            imgStar.classList.add("bi", "bi-star-fill", "icons3");
+
+            let imgStar2 = document.createElement("span");
+            imgStar2.classList.add("bi", "bi-star-fill", "icons3");
+
+            let imgStar3 = document.createElement("span");
+            imgStar3.classList.add("bi", "bi-star-fill", "icons3");
+
+            let imgStar4 = document.createElement("span");
+            imgStar4.classList.add("bi", "bi-star-fill", "icons3");
+
+            let imgStar5 = document.createElement("span");
+            imgStar5.classList.add("bi", "bi-star-fill", "icons3");
+
+            switch (this.arrayLivros[i].rating) {
+                case "1":
+                    imgStar.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar2.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar3.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar4.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar5.classList.add("bi", "bi-star-fill", "grayStar");
+                    td_favoritar.appendChild(imgStar);
+                    td_favoritar.appendChild(imgStar2);
+                    td_favoritar.appendChild(imgStar3);
+                    td_favoritar.appendChild(imgStar4);
+                    td_favoritar.appendChild(imgStar5);
+                    break;
+
+                case "2":
+                    imgStar.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar2.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar3.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar4.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar5.classList.add("bi", "bi-star-fill", "grayStar");
+                    td_favoritar.appendChild(imgStar);
+                    td_favoritar.appendChild(imgStar2);
+                    td_favoritar.appendChild(imgStar3);
+                    td_favoritar.appendChild(imgStar4);
+                    td_favoritar.appendChild(imgStar5);
+                    break;
+
+                case "3":
+                    imgStar.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar2.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar3.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar4.classList.add("bi", "bi-star-fill", "grayStar");
+                    imgStar5.classList.add("bi", "bi-star-fill", "grayStar");
+                    td_favoritar.appendChild(imgStar);
+                    td_favoritar.appendChild(imgStar2);
+                    td_favoritar.appendChild(imgStar3);
+                    td_favoritar.appendChild(imgStar4);
+                    td_favoritar.appendChild(imgStar5);
+                    break;
+
+                case "4":
+                    imgStar.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar2.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar3.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar4.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar5.classList.add("bi", "bi-star-fill", "grayStar");
+                    td_favoritar.appendChild(imgStar);
+                    td_favoritar.appendChild(imgStar2);
+                    td_favoritar.appendChild(imgStar3);
+                    td_favoritar.appendChild(imgStar4);
+                    td_favoritar.appendChild(imgStar5);
+                    break;
+
+                case "5":
+                    imgStar.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar2.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar3.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar4.classList.add("bi", "bi-star-fill", "yellowStar");
+                    imgStar5.classList.add("bi", "bi-star-fill", "yellowStar");
+                    td_favoritar.appendChild(imgStar);
+                    td_favoritar.appendChild(imgStar2);
+                    td_favoritar.appendChild(imgStar3);
+                    td_favoritar.appendChild(imgStar4);
+                    td_favoritar.appendChild(imgStar5);
+                    break;
+                default:
+            }
+
+            /* Imagem editar de ações */
+            let imgEditar = document.createElement("span");
+            imgEditar.classList.add("bi", "bi-pencil-square", "icons3")
             imgEditar.setAttribute('onclick', 'livro.editarDados(' + JSON.stringify(this.arrayLivros[i]) + ')');
 
-            let imgDeletar = document.createElement("img");
-            imgDeletar.src = "../img/deletar.svg"
+            /* Imagem deletar de ações */
+            let imgDeletar = document.createElement("span");
             imgDeletar.setAttribute('onclick', 'livro.deletar(' + this.arrayLivros[i].codigo + ')');
+            imgDeletar.classList.add("bi", "bi-trash", "icons3");
 
+            /* Inserir os elementos na tabela dinâmica */
             td_acoes.appendChild(imgEditar);
             td_acoes.appendChild(imgDeletar);
+            /* td_favoritar.appendChild(imgStar); */
         }
     }
 
@@ -97,11 +192,10 @@ class meusFavoritos {
         this.editCodigo = dados.codigo;
         document.getElementById("tituloLivro").value = dados.titulo;
         document.getElementById("autorLivro").value = dados.autor;
-
+        document.getElementById("ratingStar").value = dados.rating;
         document.getElementById("btn1").innerText = "Atualizar";
 
         this.editCodigo = dados.codigo;
-
     }
 
     /*********************  Função 7 - ATUALIZAR  ***************/
@@ -110,9 +204,11 @@ class meusFavoritos {
             if (codigo == this.arrayLivros[i].codigo) {
                 this.arrayLivros[i].titulo = document.getElementById("tituloLivro").value;
                 this.arrayLivros[i].autor = document.getElementById("autorLivro").value;
+                this.arrayLivros[i].rating = document.getElementById("ratingStar").value;
             }
         }
         document.getElementById("btn1").innerText = "Salvar";
+        document.getElementById("selected").setAttribute("checked");
         this.editCodigo = null;
     }
 
@@ -120,7 +216,7 @@ class meusFavoritos {
     cancelar() {
         document.getElementById("tituloLivro").value = "";
         document.getElementById("autorLivro").value = "";
-
+        document.getElementById("ratingStar").value = "";
         document.getElementById("btn1").innerText = "Salvar";
         this.editCodigo = null;
     }
