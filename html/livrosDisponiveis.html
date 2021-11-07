@@ -70,8 +70,8 @@
   </nav>
   <!-- CONTEUDO PRINCIPAL -->
   <main>
-    <h1 class="mt-5">Livros Disponíveis</h1>
-    <p>Confira abaixo os livros Disponíveis no nosso site</p>
+    <h1 class="mt-5"><img src="../img/caret-right-fill.svg" class="seta"> Livros Disponíveis</h1>
+    <p class="p1">Confira abaixo os livros Disponíveis no nosso site</p>
     <!-- conteudo da pagina que está no google docs -->
     <!-- Livro A Divina Comédia -->
     <div class="container">
@@ -97,7 +97,8 @@
               <p class="card-text">Machado de Assis</p>
               <p>Literatura Nacional, Livro Antigo</p>
               <button class="btn botao" id="2" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/13_7101e1a36cda79f6c97341757dcc4d04" class="btn btn1">Download</a>
+              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/13_7101e1a36cda79f6c97341757dcc4d04"
+                class="btn btn1">Download</a>
             </div>
           </div>
         </div>
@@ -110,7 +111,8 @@
               <p class="card-text">Machado de Assis</p>
               <p>Literatura Nacional</p>
               <button class="btn botao" id="3" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/12_ab2c739d2e8293712078e7b6b0c12abb" class="btn btn1">Download</a>
+              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/12_ab2c739d2e8293712078e7b6b0c12abb"
+                class="btn btn1">Download</a>
             </div>
           </div>
         </div>
@@ -430,6 +432,17 @@
       </div>
     </footer>
   </div>
+  <!-- Adicionando o VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <!--JS e JQuery do Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
