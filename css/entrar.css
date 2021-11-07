@@ -35,4 +35,31 @@
 .btn1 {
   background-color: #3b89ff;
   color: #fff;
+  margin-right: 10px;
+}
+.btn2 {
+  background-color: #fff;
+  border: 1px solid #3b89ff;
+  color: #3b89ff;
+}
+.btn3 {
+  background-color: #3b89ff;
+  color: #fff;
+}
+main{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.span_class{
+  background-color: #ffaa00;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+}
+legend{
+  color:#032a66;
+}
+footer{
+  position: absolute;
+  bottom: -600px;
 }

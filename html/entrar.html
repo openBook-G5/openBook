@@ -82,6 +82,7 @@
           <div class="d-flex">
             <button class="bi bi-box-arrow-in-right fs-5 m-2 btn btn1">
               Entrar
+              
             </button>
           </div>
         </div>
@@ -90,6 +91,77 @@
     <!-- CONTEUDO PRINCIPAL -->
     <main>
       <!-- conteudo da pagina que está no google docs -->
+      <div class="botoes mx-2 mt-3 mb-2 text-center"> 
+        <p>
+        <button class="btn btn1" id="buttonLogin" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleEntrar" aria-expanded="false" aria-controls="collapseExample" >Minha Conta</button>
+        <button class="btn btn1" id="buttonCadastro" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleCadastrar" aria-expanded="false" aria-controls="collapseExample">
+                   Quero me Cadastrar  </button> 
+        </p>
+      </div>
+
+        <div class="collapse" id="collapseExampleEntrar">
+            <!-- <div class="card card-body"> -->
+              <!-- <form class="container-fluid justify-content-around d-flex"> -->
+              <div class="container w-25"> 
+                <legend class=" text-center">Acessar Minha Conta</legend>
+                <form>
+                  <div class="col">
+                    <input type="email" class="form-control mt-3" id="txEmail" placeholder="Informe seu e-mail" title="Informe o e-mail cadastrado" required/>
+                  </div>
+                  <div class="col">
+                    <input type="password" class="form-control mt-3" id="txSenha" placeholder="Informe sua senha" title="Informe a senha cadastrada" required/>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn1 mx-3 mt-3">Login</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+
+        <div class="collapse" id="collapseExampleCadastrar">
+          <div class="container w-50">
+            <legend class="text-center fs-3">Formulário de Cadastro</legend>
+           <form class="col-lg-12 col-md-12 col-sm-12"> 
+            <form>
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="nome" required minlength="10" placeholder="Informe seu nome completo">
+              </div>
+              <div class="col">
+                <input type="email" class="form-control mt-3" id="email" required placeholder="Informe seu email">
+              </div>
+              <div class="col">
+                <input type="password" class="form-control mt-3" id="senha" required placeholder="Informe senha">
+              </div>
+              <div class="col">
+                <input type="tel"  class="form-control mt-3" id="telefone" maxlength="15" placeholder="(DD) XXXXX.XXXX">
+              </div>
+              <div>
+                <input type="text" class="form-control mt-3" id="cpf" maxlength="14" onblur="return validarCPF(this)" placeholder="XXX.XXX.XXX-XX" >
+              </div>
+              <div class="col">
+                <input type="text"  class="form-control mt-3" id="cep" maxlength="9" onblur="consultaCEP()" placeholder="XXXXX-XXX">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="logradouro" required placeholder="Rua e número">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="bairro" required placeholder="Bairro">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="localidade" required placeholder="Cidade">
+              </div>   
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="uf" required placeholder="UF">
+              </div>             
+              <div class="col text-end">
+                <button type="submit" class="btn btn3">Enviar</button>
+                <button type="reset" class="btn btn3">Limpar</button>
+              </div>           
+            </form>
+         </div>      
+        </div>
+
+   
     </main>
     <!-- Footer -->
     <div class="container-fluid justify-content-around d-flex">
