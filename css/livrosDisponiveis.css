@@ -60,3 +60,6 @@ h5{
 .p1{
   margin: 10px 10px 10px 20px;
 }
+.show{
+  display: block;
+}
