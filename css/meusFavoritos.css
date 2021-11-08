@@ -100,11 +100,12 @@ main{
 
 p{
   text-align: justify;
+  font-size: 1.2rem;
   color: #032A66;
 }
 
 #ratingStar{
-  font-size:1.05rem;
+  font-size:1.1rem;
 }
 
 .span_class{
@@ -112,7 +113,7 @@ p{
   background-color: #ffaa00;
   color: white;
   font-weight: bolder;
-  font-size:small;
+  font-size:1.1rem;
 }
 
 .input_item{

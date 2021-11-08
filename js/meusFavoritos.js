@@ -1,3 +1,4 @@
+/* BIANCA */
 /* ********************CRIAÇÃO DA CLASSE************************** */
 class meusFavoritos {
 
@@ -27,6 +28,7 @@ class meusFavoritos {
     }
 
     /**********************  Função 2 - SALVAR **********************/
+
     salvar() {
         let livro = this.lerDados();
         if (this.validarCampos(livro)) {
@@ -39,7 +41,6 @@ class meusFavoritos {
         }
         this.criarTabela();
         this.cancelar();
-        document.getElementById("selected").setAttribute("checked");
         console.log(this.arrayLivros);
     }
 
@@ -52,9 +53,9 @@ class meusFavoritos {
         if (livro.autor == "") {
             mensagem += "- Informe o(a)  autor(a) do livro! \n";
         }
-        if (livro.rating == "Favorite o livro de acordo com o seu interesse") {
+        /* if (livro.rating == "Favorite o livro de acordo com o seu interesse" || livro.rating == "") {
             mensagem += "- Selecione uma opção! \n";
-        }
+        } */
         if (mensagem != "") {
             alert(mensagem);
             return false;
@@ -208,7 +209,6 @@ class meusFavoritos {
             }
         }
         document.getElementById("btn1").innerText = "Salvar";
-        document.getElementById("selected").setAttribute("checked");
         this.editCodigo = null;
     }
 
