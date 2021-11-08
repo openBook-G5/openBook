@@ -71,14 +71,26 @@
                 Livros
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Todos</a></li>
-                <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Literatura Nacional</a>
+                  <a class="dropdown-item" href="html/livrosDisponiveis.html"
+                    >Todos</a
+                  >
                 </li>
-                <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Literatura Estrangeira</a>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <button class="btn" id="linkNacional">
+                    Literatura Nacional
+                  </button>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <button class="btn" id="linkEstrangeiro">
+                    Literatura Estrangeira
+                  </button>
                 </li>
               </ul>
             </li>
@@ -98,22 +110,22 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="6000">
+          <div class="carousel-item active">
             <video class="d-block w-100" autoplay loop>
               <source src="img/b1.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="carousel-item" data-bs-interval="6000">
+          <div class="carousel-item">
             <video class="d-block w-100" autoplay loop>
               <source src="img/b2.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="carousel-item" data-bs-interval="6000">
+          <div class="carousel-item">
             <video class="d-block w-100" autoplay loop>
               <source src="img/b3.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="carousel-item" data-bs-interval="6000">
+          <div class="carousel-item">
             <video class="d-block w-100" autoplay loop>
               <source src="img/b4.mp4" type="video/mp4" />
             </video>
@@ -139,7 +151,19 @@
         </button>
       </div>
     </header>
+
     <main>
+      <!-- Adicionando o VLibras -->
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
       <div class="container-fluid">
         <div class="row text-center">
           <div
@@ -148,10 +172,12 @@
               d-flex
               flex-column
               justify-content-center
+              beneficios
             "
-            style="height: 8vh; border: 1px solid black"
           >
-            INTERFACE
+            <span class="bi bi-hand-index-thumb"></span>
+
+            <p class="fw-bold">INTUITIVO</p>
           </div>
           <div
             class="
@@ -159,10 +185,11 @@
               d-flex
               flex-column
               justify-content-center
+              beneficios
             "
-            style="height: 8vh; border: 1px solid black"
           >
-            UM CLIQUE
+            <span class="bi bi-download"></span>
+            <p class="fw-bold">RÁPIDO</p>
           </div>
           <div
             class="
@@ -170,10 +197,11 @@
               d-flex
               flex-column
               justify-content-center
+              beneficios
             "
-            style="height: 8vh; border: 1px solid black"
           >
-            SEGURO
+            <span class="bi bi-lock"></span>
+            <p class="fw-bold">SEGURO</p>
           </div>
           <div
             class="
@@ -181,22 +209,28 @@
               d-flex
               flex-column
               justify-content-center
+              beneficios
             "
-            style="height: 8vh; border: 1px solid black"
           >
-            VARIEDADE
+            <span class="bi bi-book"></span>
+            <p class="fw-bold">VARIEDADE</p>
           </div>
         </div>
       </div>
       <div class="container p-2">
-        <div class="row mb-3">
-          <h1 class="col text-center p-5 tituloAzul">
-            ALGUMA FRASE PARA FAZER UM EFEITO ALGUMA FRASE PARA FAZER UM EFEITO
-          </h1>
+        <div class="row my-5">
+          <div class="col p-5">
+            <h1 class="text-center tituloAzul">
+              GRATUITO, EDUCATIVO E PÚBLICO.
+            </h1>
+            <h2 class="text-center fw-bold fst-italic tituloAzul">
+              OPENCULTURA, OPENBOOK.
+            </h2>
+          </div>
         </div>
 
         <div class="row mb-5">
-          <p class="text-justify">
+          <p class="text-center">
             Todos os livros tem como fonte sites do governo, onde a distribuição
             para uso não comercial é legal. Nossa solução não possui fins
             lucrativos, apenas didáticos. Aqui você encontrará uma interface
@@ -204,9 +238,9 @@
             acervos de domínio público.
           </p>
           <p>
-            Confira alguns destaques, Curiosidades sobre os autores, mais
-            informações sobre o domínio público e as leis autorais que regem a
-            distribuição de arquivos...
+            Confira alguns destaques, fatos sobre os autores, mais informações
+            sobre o domínio público e as leis autorais que regem a distribuição
+            de arquivos online.
           </p>
         </div>
         <hr />
@@ -222,13 +256,16 @@
             "
           >
             <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
+              <img src="img/Ametamorfose.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Nome do Livro</h5>
+                <h5 class="card-title">A metamorfose</h5>
                 <p class="card-text">
-                  Livro da Literatura ... escrito em .... por .....
+                  Livro da Literatura Estrangeira. Escrito em 1915 por Franz
+                  Kafka.
                 </p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                <a href="html/livrosDisponiveis.html" class="btn btn-primary"
+                  >Saiba Mais</a
+                >
               </div>
             </div>
           </div>
@@ -241,13 +278,19 @@
             "
           >
             <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
+              <img
+                src="img/AvoltaAoMundoEm80Dias .png"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
-                <h5 class="card-title">Nome do Livro</h5>
+                <h5 class="card-title">A Volta ao Mundo em 80 Dias</h5>
                 <p class="card-text">
-                  Livro da Literatura ... escrito em .... por .....
+                  Livro da Literatura Nacional. Escrito em 1874 por Júlio Verne.
                 </p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                <a href="html/livrosDisponiveis.html" class="btn btn-primary"
+                  >Saiba Mais</a
+                >
               </div>
             </div>
           </div>
@@ -260,13 +303,16 @@
             "
           >
             <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
+              <img src="img/Senhora.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Nome do Livro</h5>
+                <h5 class="card-title">Senhora</h5>
                 <p class="card-text">
-                  Livro da Literatura ... escrito em .... por .....
+                  Livro da Literatura Nacional. Escrito em 1875 por José de
+                  Alencar.
                 </p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                <a href="html/livrosDisponiveis.html" class="btn btn-primary"
+                  >Saiba Mais</a
+                >
               </div>
             </div>
           </div>
@@ -279,13 +325,16 @@
             "
           >
             <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
+              <img src="img/Utopia.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Nome do Livro</h5>
+                <h5 class="card-title">Utopia</h5>
                 <p class="card-text">
-                  Livro da Literatura ... escrito em .... por .....
+                  Livro de Literatura Estrangeira. Escrito em 1516 por Thomas
+                  Morus.
                 </p>
-                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                <a href="html/livrosDisponiveis.html" class="btn btn-primary"
+                  >Saiba Mais</a
+                >
               </div>
             </div>
           </div>
@@ -305,7 +354,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Accordion Item #1
+                  JÚLIA LOPES DE ALMEIDA
                 </button>
               </h2>
               <div
@@ -315,9 +364,7 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  <p>ALGUMA Curiosidades</p>
                 </div>
               </div>
             </div>
@@ -331,7 +378,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Accordion Item #2
+                  MACHADO DE ASSIS
                 </button>
               </h2>
               <div
@@ -358,7 +405,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Accordion Item #3
+                  SÓFOCLES
                 </button>
               </h2>
               <div
@@ -385,7 +432,7 @@
           <h2 class="text-center p-5 tituloAzul">Domínio Publico</h2>
           <div class="col-lg-6 col-md-6 col-sm-12">
             <img
-              src="https://source.unsplash.com/random"
+              src="img/dominioPublico.jpeg"
               alt=""
               class="img-fluid img-thumbnail"
             />
@@ -398,45 +445,30 @@
               justify-content-center
             "
           >
+            <p>
+              Sabe-se que, existem leis que regem o Direito Autoral. Entre elas,
+              o Direito de Uso e Direito de Distribuição Online. O Artigo 41 da
+              Lei 9610/98 informa que, após um período, aplica-se em uma obra
+              autoral o Direito Patrimonial. Isso possibilita que tais obras
+              sejam disponibilizadas em domínio público.
+            </p>
             <figure class="text-end">
               <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
+                <p>
+                  "Os direitos patrimoniais do autor perduram por setenta anos
+                  contados de 1º de janeiro do ano subseqüente ao de seu
+                  falecimento, obedecida a ordem sucessória da lei civil."
+                </p>
               </blockquote>
               <figcaption class="blockquote-footer">
-                Someone famous in <cite title="Source Title">Source Title</cite>
+                Art. 41,
+                <a href="http://www.planalto.gov.br/ccivil_03/leis/l9610.htm"
+                  ><cite title="Source Title"
+                    >LEI Nº 9.610, DE 19 DE FEVEREIRO DE 1998.</cite
+                  ></a
+                >
               </figcaption>
             </figure>
-          </div>
-          <!-- falar um pouco mais sobre o dominio publico -->
-        </div>
-        <hr />
-        <div class="row mb-5">
-          <!-- falar um pouco mais sobre as leis autorais? -->
-          <h2 class="text-center p-5 tituloAzul">Leis Autorais e Ética</h2>
-
-          <div
-            class="
-              col-lg-6 col-md-6 col-sm-12
-              d-flex
-              flex-column
-              justify-content-center
-            "
-          >
-            <figure class="text-end">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <img
-              src="https://source.unsplash.com/random"
-              alt=""
-              class="img-fluid img-thumbnail"
-            />
           </div>
         </div>
       </div>
@@ -448,25 +480,26 @@
             <h5>openBook</h5>
             <ul class="nav flex-column mb-4">
               <li class="nav-item mb-2">
-                <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
+                <a href="index.html" class="nav-link p-0 text-muted">Home</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="quemSomos.html" class="nav-link p-0 text-muted"
+                <a href="html/quemSomos.html" class="nav-link p-0 text-muted"
                   >Quem somos nós?</a
                 >
               </li>
               <li class="nav-item mb-2">
-                <a href="meusFavoritos.html" class="nav-link p-0 text-muted"
+                <a
+                  href="html/meusFavoritos.html"
+                  class="nav-link p-0 text-muted"
                   >Meus Favoritos</a
                 >
               </li>
               <li class="nav-item mb-2">
-                <a href="livrosDisponiveis.html" class="nav-link p-0 text-muted"
+                <a
+                  href="html/livrosDisponiveis.html"
+                  class="nav-link p-0 text-muted"
                   >Livros</a
                 >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"></a>
               </li>
               <li class="nav-item mb-2">
                 <a href="#" class="nav-link p-0 text-muted"

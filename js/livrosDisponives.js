@@ -46,18 +46,20 @@ for (let i = 0; i < x.length; i++) {
     //crio um evento com a minha variável que ao clicar no botão irá acionar uma função anonima
     x[i].addEventListener("click", function () {
         //o if irá verificar se o id de determinado botão acionado corresponde ao codigo do array que declaramos acima (linha 1)
-        if (Number(x[i].id) == livros[i].codigo) {
+        if (Number(x[i].id) === livros[i].codigo) {
+            alert(x[i].id);
             //se a condição do if for verdadeira irá acrescentar no meu id="livro" o nome do livro que foi estabelecido no objeto acima (linha 1)
-            document.getElementById("livro").innerText = livros[i].nome
+            document.getElementById("livro").innerText = livros[i].nome;
             document.getElementById("nomeAutor").innerText = livros[i].resumo;
-            document.getElementById("Ano").innerText = livros[i].ano
+            document.getElementById("Ano").innerText = livros[i].ano;
         }
-    })
+    });
 }
-;
-$('#linkNacional').click(function (){
+$('#linkNacional').click(function () {
     $('.estrangeiro').hide();
     $(".nacional").show()
+    // $('.livrosDisponiveis').hide()
+    // $('lNacional').innerHTML += `<h1>Literatura Nacional</h1>`;
 });
 $('#linkEstrangeiro').click(function () {
     $('.nacional').hide();
