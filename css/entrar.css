@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
-*{
+* {
   font-family: 'roboto';
 }
 
@@ -65,26 +65,21 @@ main {
 legend {
   color: #032a66;
 } */
-legend{
-  color:#032a66;
-}
-footer{
-  position: absolute;
-  bottom: -700px;
+legend {
+  color: #032a66;
 }
 
- /* .tamIcon{
+/* .tamIcon{
   width: 10px;
   height: 10px;
 
 }  */
 
-.mensagem{
+.mensagem {
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
   margin: 0 auto;
   padding: 25px 0;
-  color:#032a66;
+  color: #032a66;
 }
-
