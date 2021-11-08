@@ -14,6 +14,7 @@ class meusFavoritos {
   }
 
   /* ***************Função 1 - LER DADOS************************* */
+  /* Esta função irá ler os dados inseridos nos inputs */
   lerDados() {
     /* alert("lerDados"); */
     let livro = {};
@@ -28,7 +29,7 @@ class meusFavoritos {
   }
 
   /**********************  Função 2 - SALVAR **********************/
-
+  /* A função salvar é um elo entro lerDados() e validarCampos(). Ele salva os elementos inseridos nos inputs depois que eles passam pela validação */
   salvar() {
     let livro = this.lerDados();
     if (this.validarCampos(livro)) {
@@ -45,6 +46,7 @@ class meusFavoritos {
   }
 
   /*********************  Função 3 - VALIDAR CAMPOS ***************/
+  /* Valida os campos inseridos nos inputs */
   validarCampos(livro) {
     let mensagem = '';
     if (livro.titulo == '') {
@@ -60,17 +62,17 @@ class meusFavoritos {
       alert(mensagem);
       return false;
     }
-
     return true;
   }
 
   /*********************  Função 4 - ADICIONAR LIVRO ***************/
+  /* Adiciona os dados numa array */
   adicionar(livro) {
     this.arrayLivros.push(livro);
     this.codigo++;
   }
 
-  /*********************  Função 5 - CRIAR TABELA ***************/
+  /*********************  Função 5 - CRIAR TABELA DINÂMICA ***************/
   criarTabela() {
     let tbody = document.getElementById('tbody');
     //resetar a lista quando salvar um novo produto
@@ -87,7 +89,7 @@ class meusFavoritos {
       td_titulo.innerText = this.arrayLivros[i].titulo;
       td_autor.innerText = this.arrayLivros[i].autor;
 
-      /* Inserir as estrelas no favorito */
+      /* Inserir as estrelas no desejômetro. Precisei criar cada uma das cinco estrelas de maneira separada e independente */
       let imgStar = document.createElement('span');
       imgStar.classList.add('bi', 'bi-star-fill', 'icons3');
 
@@ -103,6 +105,7 @@ class meusFavoritos {
       let imgStar5 = document.createElement('span');
       imgStar5.classList.add('bi', 'bi-star-fill', 'icons3');
 
+      /* Uso do Switch para inserir as estrelas */
       switch (this.arrayLivros[i].rating) {
         case '1':
           imgStar.classList.add('bi', 'bi-star-fill', 'yellowStar');
@@ -190,11 +193,11 @@ class meusFavoritos {
       /* Inserir os elementos na tabela dinâmica */
       td_acoes.appendChild(imgEditar);
       td_acoes.appendChild(imgDeletar);
-      /* td_favoritar.appendChild(imgStar); */
     }
   }
 
   /*********************  Função 6 - EDITAR  ***************/
+  /* Permite que os dados sejam editados */
   editarDados(dados) {
     this.editCodigo = dados.codigo;
     document.getElementById('tituloLivro').value = dados.titulo;
@@ -206,6 +209,7 @@ class meusFavoritos {
   }
 
   /*********************  Função 7 - ATUALIZAR  ***************/
+  /* A função atualizar é "puxada" pela função atualizar dados. Ela sempre será chamada na execução de atualização dos dados */
   atualizarEdicao(codigo) {
     for (let i = 0; i < this.arrayLivros.length; i++) {
       if (codigo == this.arrayLivros[i].codigo) {
@@ -221,6 +225,7 @@ class meusFavoritos {
   }
 
   /*********************  Função 8 - CANCELAR  ***************/
+  /* Cancela e limpa as informações inseridas quando acionado */
   cancelar() {
     document.getElementById('tituloLivro').value = '';
     document.getElementById('autorLivro').value = '';
@@ -230,6 +235,7 @@ class meusFavoritos {
   }
 
   /*********************  Função 9 - DELETAR ***************/
+  /* Deleta as informações quando acionado */
   deletar(codigoProcurado) {
     if (
       confirm('Desdeja realmente deletar o livro ' + codigoProcurado + ' ?')
