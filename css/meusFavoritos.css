@@ -1,3 +1,4 @@
+/* Bianca */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
 
 /* Toda a página recebe a fonte roboto */
@@ -61,6 +62,11 @@
   color: #c48200;
 }
 
+/* Estilização do tamanho das estrelas */
+#ratingStar{
+  font-size:1.1rem;
+}
+
 /* Ícone das estrelas */
 .yellowStar {
   padding: 0;
@@ -71,6 +77,7 @@
 .yellowStar:hover {
   color: #c48200;
 }
+
 /* Ícone das estrelas */
 .grayStar {
   padding: 0;
@@ -82,10 +89,13 @@
   color: #949494;
 }
 
+/* Estilização da maior parte dos botões */
 .btn1 {
   background-color: #3b89ff;
   color: #fff;
 }
+
+/* Estilização do botão cancelar */
 .btn2 {
   background-color: #fff;
   border: 1px solid #3b89ff;
@@ -104,10 +114,7 @@ p{
   color: #032A66;
 }
 
-#ratingStar{
-  font-size:1.1rem;
-}
-
+/* Estlização do span nos elementos de formulário como input e select */
 .span_class{
   padding: 10px 5px;
   background-color: #ffaa00;
@@ -116,6 +123,7 @@ p{
   font-size:1.1rem;
 }
 
+/* Estilização dos inputs */
 .input_item{
   font-size: 1.1rem;
 }
@@ -124,6 +132,7 @@ h1{
   color: #1755b3;
 }
 
+/* Estilização da tabela */
 #tabela{
   border-bottom:1px solid #1755b3;  
 }
@@ -139,7 +148,7 @@ th{
   font-size: 1.2rem;
 }
 
-
+/* Adição de responsividade para a main quando a tela for igual ou menor a 768px */
 @media screen and (max-width: 768px){
   main{
     width: 100%;
