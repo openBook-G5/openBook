@@ -51,35 +51,7 @@
   background-color: #3b89ff;
   color: #fff;
 }
-main {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 
-/* .span_class{
-  background-color: #ffaa00;
-  color: white;
-  font-weight: bold;
-  font-size: small;
-}
 legend {
-  color: #032a66;
-} */
-legend {
-  color: #032a66;
-}
-
-/* .tamIcon{
-  width: 10px;
-  height: 10px;
-
-}  */
-
-.mensagem {
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  margin: 0 auto;
-  padding: 25px 0;
   color: #032a66;
 }

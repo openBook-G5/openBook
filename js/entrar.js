@@ -30,15 +30,10 @@ function _cpf(cpf) {
 }
 function validarCPF(el) {
   if (!_cpf(el.value)) {
-    // alert('CPF inválido!' + el.value);
+    //  alert("CPF inválido!" + el.value);
     // apaga o valor
     el.value = '';
-    document.formCadastro.cpf.focus();
-    return false;
   }
-  // else {
-  //   document.formCadastro.cep.focus();
-  // }
 }
 
 const apresentaDados = resultado => {
@@ -70,10 +65,7 @@ function consultaCEP() {
 
 //Validando os  campos formulário de cadastro
 function validadados() {
-  if (
-    document.formCadastro.nomeCompleto.value == '' ||
-    document.formCadastro.nomeCompleto.value.length < 4
-  ) {
+  if (document.formCadastro.nomeCompleto.value.length < 11) {
     alert('Informe um nome válido');
     //propriedade focus setar para o input nome caso não seja preeenchido
     document.formCadastro.nomeCompleto.focus();
@@ -81,18 +73,13 @@ function validadados() {
     return false;
   }
 
-  if (
-    document.formCadastro.email.value == '' ||
-    document.formCadastro.email.value.length < 10
-  ) {
+  if (document.formCadastro.email.value.length < 10) {
     alert('Informe um E-mail válido');
     document.formCadastro.email.focus();
     return false;
   }
-  if (
-    document.formCadastro.senha.value == '' ||
-    document.formCadastro.senha.value.length < 3
-  ) {
+
+  if (document.formCadastro.senha.value.length < 3) {
     alert('Informe uma senha');
     document.formCadastro.senha.focus();
     return false;
@@ -109,49 +96,27 @@ function validadados() {
 
   if (
     document.formCadastro.cpf.value == '' ||
-    document.formCadastro.cpf.value.length < 5
+    document.formCadastro.cpf.value.length < 11
   ) {
     alert('Informe um CPF válido');
     document.formCadastro.cpf.focus();
     return false;
   }
-  if (document.formCadastro.cpf.value >= 11) {
-    validarCPF(document.getElementById('cpf').value);
+
+  if (
+    document.formCadastro.cep.value == '' ||
+    document.formCadastro.cep.value.length < 7
+  ) {
+    alert('Informe um CEP válido');
     document.formCadastro.cep.focus();
     return false;
   }
-  // alice testou
-
-  // if (
-  //   document.formCadastro.cep.value == '' ||
-  //   document.formCadastro.cep.value.length < 7
-  // ) {
-  //   alert('Informe um CEP válido');
-  //   document.formCadastro.cep.focus();
-  //   return false;
-  // }
   if (
     document.formCadastro.logradouro.value == '' ||
     document.formCadastro.logradouro.value.length < 5
   ) {
     alert('Informe um endereço válido');
     document.form.logradouro.focus();
-    return false;
-  }
-  if (
-    document.formCadastro.bairro.value == '' ||
-    document.formCadastro.bairro.value.length < 4
-  ) {
-    alert('Informe um bairro válido');
-    document.form.bairro.focus();
-    return false;
-  }
-  if (
-    document.formCadastro.numero.value == '' ||
-    document.formCadastro.numero.value.length < 2
-  ) {
-    alert('Informe um número válido');
-    document.formCadastro.numero.focus();
     return false;
   }
 
@@ -174,27 +139,25 @@ function validadados() {
 
   {
     alert('Cadastro Concluido - Bem Vindo a OpenBook!');
+    document.formCadastro.nomeCompleto.value = '';
+    document.formCadastro.email.value = '';
+    document.formCadastro.senha.value = '';
+    document.formCadastro.telefone.value = '';
+    document.formCadastro.cpf.value = '';
+    document.formCadastro.cep.value = '';
+    document.formCadastro.logradouro.value = '';
+    document.formCadastro.bairro.value = '';
+    document.formCadastro.numero.value = '';
+    document.formCadastro.localidade.value = '';
+    document.formCadastro.uf.value = '';
   }
 }
-
-//   if (!document.querySelector('[name="rdSexo"]:checked')) {
-//     alert('Selecione o sexo ao qual vocês se identifica, corretamente!');
-//     return false;
-//   }
-//   if (!document.querySelector('[name="ckFuncao"]:checked')) {
-//     alert(
-//       'Selecione as habilidades corespondentes aos seu perfil corretamente!'
-//     );
-//     return false;
-//   }
 
 $('#buttonLogin').click(function () {
   $('#formCadastrar').hide();
   $('#formLogin').show();
-  document.mensagem.hide;
 });
 $('#buttonCadastro').click(function () {
   $('#formLogin').hide();
   $('#formCadastrar').show();
-  document.mensagem.hide;
 });
