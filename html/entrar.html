@@ -101,8 +101,13 @@
       </div>
     </nav>
     <!-- CONTEUDO PRINCIPAL -->
-    <main>
+    <main class="mb-3">
       <!-- conteudo da pagina que está no google docs -->
+
+      <div>
+        <img class="d-block w-100" src="../img/img-formulario.jpeg" />
+      </div>
+
       <div class="botoes mx-2 mt-3 mb-2 text-center">
         <p>
           <button
@@ -131,8 +136,6 @@
       </div>
 
       <div class="collapse" id="collapseExampleEntrar">
-        <!-- <div class="card card-body"> -->
-        <!-- <form class="container-fluid justify-content-around d-flex"> -->
         <div class="container w-25" id="formLogin">
           <legend class="text-center">Acessar Minha Conta</legend>
           <form action="#" method="POST">
@@ -162,18 +165,11 @@
           </form>
         </div>
       </div>
-      <!-- <h3 class="mensagem"> Acesse sua conta: <br>Tenha em mãos este grande acervo</h3> -->
 
       <div class="collapse" id="collapseExampleCadastrar">
         <div class="container w-50" id="formCadastrar">
           <legend class="text-center fs-3">Formulário de Cadastro</legend>
-          <form
-            action="#"
-            method="POST"
-            name="formCadastro"
-            class="col-lg-12 col-md-12 col-sm-12"
-            onsubmit="return validadados();"
-          >
+          <form name="formCadastro" class="col-lg-12 col-md-12 col-sm-12">
             <div class="col">
               <input
                 type="text"
@@ -194,8 +190,6 @@
               />
             </div>
             <div class="col">
-              <!-- <div class="input-group">
-                  <span class="input-group-text span_class"></span> -->
               <input
                 type="password"
                 class="form-control mt-3"
@@ -203,7 +197,6 @@
                 required
                 placeholder="Informe uma senha"
               />
-              <!-- </div> -->
             </div>
             <div class="col">
               <input
@@ -211,7 +204,6 @@
                 class="form-control mt-3"
                 id="telefone"
                 required
-                maxlength="15"
                 placeholder="(DD) XXXXX.XXXX"
               />
             </div>
@@ -220,9 +212,8 @@
                 type="text"
                 class="form-control mt-3"
                 id="cpf"
-                name="cpf"
                 maxlength="14"
-                onblur="validarCPF(this)"
+                onblur="return validarCPF(this);"
                 placeholder="XXX.XXX.XXX-XX"
               />
             </div>
@@ -279,7 +270,7 @@
             </div>
             <div class="col mt-3 text-end">
               <button
-                type="submit"
+                type="button"
                 class="btn btn3"
                 onclick="validadados()"
                 value="Exibir Alert"
@@ -292,7 +283,6 @@
         </div>
       </div>
     </main>
-
     <!-- FOOTER -->
     <div class="container-fluid border-top">
       <footer class="py-5">
