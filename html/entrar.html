@@ -100,16 +100,14 @@
       </div>
 
         <div class="collapse" id="collapseExampleEntrar">
-            <!-- <div class="card card-body"> -->
-              <!-- <form class="container-fluid justify-content-around d-flex"> -->
-              <div class="container w-25"> 
-                <legend class=" text-center">Acessar Minha Conta</legend>
-                <form>
+            <div class="container w-25" id="formLogin"> 
+              <legend class="text-center">Acessar Minha Conta</legend>
+                <form action="#" method="POST" >
                   <div class="col">
-                    <input type="email" class="form-control mt-3" id="txEmail" placeholder="Informe seu e-mail" title="Informe o e-mail cadastrado" required/>
+                    <input type="email" class="form-control mt-3" id="InputEmail" placeholder="Informe seu e-mail" title="Informe o e-mail cadastrado" required/>
                   </div>
                   <div class="col">
-                    <input type="password" class="form-control mt-3" id="txSenha" placeholder="Informe sua senha" title="Informe a senha cadastrada" required/>
+                    <input type="password" class="form-control mt-3" id="InputSenha" placeholder="Informe sua senha" title="Informe a senha cadastrada" required/>
                   </div>
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn1 mx-3 mt-3">Login</button>
@@ -117,23 +115,26 @@
                 </form>
               </div>
         </div>
+        <!-- <h3 class="mensagem"> Acesse sua conta: <br>Tenha em mãos este grande acervo</h3> -->
 
         <div class="collapse" id="collapseExampleCadastrar">
-          <div class="container w-50">
+          <div class="container w-50" id="formCadastrar">
             <legend class="text-center fs-3">Formulário de Cadastro</legend>
-           <form class="col-lg-12 col-md-12 col-sm-12"> 
-            <form>
+            <form action="#" method="POST"name="formCadastro" class="col-lg-12 col-md-12 col-sm-12" onsubmit="return validadados();">
               <div class="col">
-                <input type="text" class="form-control mt-3" id="nome" required minlength="10" placeholder="Informe seu nome completo">
+                <input type="text" class="form-control mt-3" id="nomeCompleto" required minlength="10" placeholder="Informe seu nome completo">
               </div>
               <div class="col">
                 <input type="email" class="form-control mt-3" id="email" required placeholder="Informe seu email">
               </div>
               <div class="col">
-                <input type="password" class="form-control mt-3" id="senha" required placeholder="Informe senha">
+                <!-- <div class="input-group">
+                  <span class="input-group-text span_class"></span> -->
+                  <input type="password" class="form-control mt-3" id="senha" required placeholder="Informe uma senha">
+                <!-- </div> -->
               </div>
               <div class="col">
-                <input type="tel"  class="form-control mt-3" id="telefone" maxlength="15" placeholder="(DD) XXXXX.XXXX">
+                <input type="tel"  class="form-control mt-3" id="telefone" required maxlength="15" placeholder="(DD) XXXXX.XXXX">
               </div>
               <div>
                 <input type="text" class="form-control mt-3" id="cpf" maxlength="14" onblur="return validarCPF(this)" placeholder="XXX.XXX.XXX-XX" >
@@ -142,19 +143,22 @@
                 <input type="text"  class="form-control mt-3" id="cep" maxlength="9" onblur="consultaCEP()" placeholder="XXXXX-XXX">
               </div>
               <div class="col">
-                <input type="text" class="form-control mt-3" id="logradouro" required placeholder="Rua e número">
+                <input type="text" class="form-control mt-3" id="logradouro"  placeholder="Rua">
               </div>
               <div class="col">
-                <input type="text" class="form-control mt-3" id="bairro" required placeholder="Bairro">
+                <input type="text" class="form-control mt-3" id="numero"  placeholder="Número">
               </div>
               <div class="col">
-                <input type="text" class="form-control mt-3" id="localidade" required placeholder="Cidade">
+                <input type="text" class="form-control mt-3" id="bairro" placeholder="Bairro">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="uf" maxlength="2"  placeholder="UF">
+              </div>    
+              <div class="col">
+                <input type="text" class="form-control mt-3" id="localidade"  placeholder="Cidade">
               </div>   
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="uf" required placeholder="UF">
-              </div>             
-              <div class="col text-end">
-                <button type="submit" class="btn btn3">Enviar</button>
+              <div class="col mt-3 text-end">
+                <button type="submit" class="btn btn3" onclick="validadados()" value="Exibir Alert">Enviar</button>
                 <button type="reset" class="btn btn3">Limpar</button>
               </div>           
             </form>
@@ -231,6 +235,20 @@
         </div>
       </footer>
     </div>
+
+  
+  <!-- Inserindo VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
 
     <!--JS e JQuery do Bootstrap-->
     <script
