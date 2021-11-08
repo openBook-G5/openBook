@@ -70,8 +70,8 @@
   </nav>
   <!-- CONTEUDO PRINCIPAL -->
   <main>
-    <h1 class="mt-5 livrosDisponiveis"><img src="../img/caret-right-fill.svg" class="seta"> Livros Disponíveis</h1>
-    <p class="p1">Confira abaixo os livros Disponíveis no nosso site</p>
+    <h1 class="mt-5 text-center"><img src="../img/caret-right-fill.svg" class="seta"> Livros Disponíveis</h1>
+    <p class="p1 text-center">Confira abaixo os livros Disponíveis no nosso site</p>
     <!-- conteudo da pagina que está no google docs -->
     <!-- Livro A Divina Comédia -->
     <div class="container">
@@ -89,6 +89,34 @@
             </div>
           </div>
         </div>
+        <!-- Livro Dom Casmurro -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
+          <div class="card">
+            <img src="../img/DomCasmurro.png" class="card-img-top img-thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">Dom Casmurro</h5>
+              <p class="card-text">Machado de Assis</p>
+              <p>Literatura Nacional, Livro Antigo</p>
+              <button class="btn botao" id="2" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/13_7101e1a36cda79f6c97341757dcc4d04"
+                class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
+        <!-- Livro Esaú e Jacó -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
+          <div class="card">
+            <img src="../img/EsaueJaco.png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Esaú e Jacó</h5>
+              <p class="card-text">Machado de Assis</p>
+              <p>Literatura Nacional</p>
+              <button class="btn botao" id="3" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/12_ab2c739d2e8293712078e7b6b0c12abb"
+                class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
         <!-- Livro Metamorfose -->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
           <div class="card">
@@ -102,7 +130,22 @@
             </div>
           </div>
         </div>
-
+      </div>
+      <!-- segunda linha -->
+      <div class="row">
+        <!-- Livro Eu e outras poesias -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
+          <div class="card">
+            <img src="../img/EueOutrasPoesias.png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Eu e outras Poesias</h5>
+              <p class="card-text">Augusto dos Anjos</p>
+              <p class="card-text">Literatura Nacional, Poesia</p>
+              <button class="btn botao" id="5" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/bv.00054a.pdf" class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
         <!-- Livro Volta ao mundo em 80 Dias -->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
           <div class="card">
@@ -129,19 +172,32 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- segunda linha -->
-      <div class="row">
         <!-- Livro Edipo-Rei -->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
           <div class="card">
             <img src="../img/EdipoRei.png" class="card-img-top img-thumbnail" alt="...">
             <div class="card-body">
               <h5 class="card-title">Édipo-Rei</h5>
-              <p class="card-text">Sófocles</p><br>
+              <p class="card-text">Sófocles</p>
               <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
               <button class="btn botao" id="8" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
               <a href="http://www.dominiopublico.gov.br/download/texto/cv000024.pdf" class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Terceira linha -->
+      <div class="row">
+        <!-- Livro Senhora -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
+          <div class="card">
+            <img src="../img/Senhora.png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Senhora</h5>
+              <p class="card-text">José de Alencar</p><br>
+              <p class="card-text">Literatura Nacional, Livro Antigo</p>
+              <button class="btn botao" id="9" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/bn000011.pdf" class="btn btn1">Download</a>
             </div>
           </div>
         </div>
@@ -158,35 +214,6 @@
             </div>
           </div>
         </div>
-        <!-- Livro Primo Basilio -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
-          <div class="card">
-            <img src="../img/OprimoBasilio.png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">O primo Basílio</h5>
-              <p class="card-text">Eça de Queirós</p><br>
-              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
-              <button class="btn botao" id="13" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/bi000143.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-        <!-- Livro Fausto -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
-          <div class="card">
-            <img src="../img/Fausto.png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Fausto</h5>
-              <p class="card-text">Johann Wolfgang von Goethe</p><br>
-              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
-              <button class="btn botao" id="16" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/eb000011.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Terceira linha -->
-      <div class="row">
         <!-- Livro As maluquices do imperador -->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
           <div class="card">
@@ -206,14 +233,29 @@
             <img src="../img/HistoriaPeloponeso.png" class="card-img-top img-thumbnail" alt="...">
             <div class="card-body">
               <h5 class="card-title">História da Guerra do Peloponeso</h5>
-              <p class="card-text">Tucídides</p>
+              <p class="card-text">Tucídides</p><br>
               <p class="card-text">História, Livro Antigo</p>
               <button class="btn botao" id="12" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
               <a href="http://www.dominiopublico.gov.br/download/texto/al000234.pdf" class="btn btn1">Download</a>
             </div>
           </div>
         </div>
-
+      </div>
+      <!-- Quarta linha -->
+      <div class="row">
+        <!-- Livro Primo Basilio -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
+          <div class="card">
+            <img src="../img/OprimoBasilio.png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">O primo Basílio</h5>
+              <p class="card-text">Eça de Queirós</p><br>
+              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
+              <button class="btn botao" id="13" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/bi000143.pdf" class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
         <!-- Livro O cortiço-->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
           <div class="card">
@@ -240,9 +282,21 @@
             </div>
           </div>
         </div>
+        <!-- Livro Fausto -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
+          <div class="card">
+            <img src="../img/Fausto.png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Fausto</h5>
+              <p class="card-text">Johann Wolfgang von Goethe</p><br>
+              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
+              <button class="btn botao" id="16" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/eb000011.pdf" class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <!--Fecha linha 3-->
-      <!-- Quarta linha -->
+      <!-- Quinta linha -->
       <div class="row">
         <!-- Livro Inocencia -->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
@@ -254,62 +308,6 @@
               <p class="card-text">Literatura Nacional, Livro Antigo</p>
               <button class="btn botao" id="17" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
               <a href="http://www.dominiopublico.gov.br/download/texto/bi000207.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Livro Iracema-->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
-          <div class="card">
-            <img src="../img/Iracema.png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Iracema</h5>
-              <p class="card-text">José de Alencar</p>
-              <p>Literatura Nacional, Livro Antigo</p>
-              <button class="btn botao" id="19" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/bv000136.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-        <!-- Livro Eu e outras poesias -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
-          <div class="card">
-            <img src="../img/EueOutrasPoesias.png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Eu e outras Poesias</h5>
-              <p class="card-text">Augusto dos Anjos</p>
-              <p class="card-text">Literatura Nacional, Poesia</p>
-              <button class="btn botao" id="5" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/bv.00054a.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-        <!-- Livro Senhora -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
-          <div class="card">
-            <img src="../img/Senhora.png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Senhora</h5>
-              <p class="card-text">José de Alencar</p>
-              <p class="card-text">Literatura Nacional, Livro Antigo</p>
-              <button class="btn botao" id="9" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/bn000011.pdf" class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Quinta linha -->
-      <div class="row">
-        <!-- Livro a dama das cemelias -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
-          <div class="card">
-            <img src="../img/ADamadasCamélias .png" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">A dama das Camélias</h5>
-              <p class="card-text">Alexandre Dumas</p>
-              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
-              <button class="btn botao" id="20" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://www.dominiopublico.gov.br/download/texto/ua00006a.pdf" class="btn btn1">Download</a>
             </div>
           </div>
         </div>
@@ -326,37 +324,36 @@
             </div>
           </div>
         </div>
-        <!-- Livro Esaú e Jacó -->
+        <!-- Livro Iracema-->
         <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
           <div class="card">
-            <img src="../img/EsaueJaco.png" class="card-img-top img-thumbnail" alt="...">
+            <img src="../img/Iracema.png" class="card-img-top img-thumbnail" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Esaú e Jacó</h5>
-              <p class="card-text">Machado de Assis</p>
-              <p>Literatura Nacional</p>
-              <button class="btn botao" id="3" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/12_ab2c739d2e8293712078e7b6b0c12abb"
-                class="btn btn1">Download</a>
-            </div>
-          </div>
-        </div>
-        <!-- Livro Dom Casmurro -->
-        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 nacional">
-          <div class="card">
-            <img src="../img/DomCasmurro.png" class="card-img-top img-thumbnail">
-            <div class="card-body">
-              <h5 class="card-title">Dom Casmurro</h5>
-              <p class="card-text">Machado de Assis</p>
+              <h5 class="card-title">Iracema</h5>
+              <p class="card-text">José de Alencar</p>
               <p>Literatura Nacional, Livro Antigo</p>
-              <button class="btn botao" id="2" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
-              <a href="http://machado.mec.gov.br/obra-completa-lista/item/download/13_7101e1a36cda79f6c97341757dcc4d04"
-                class="btn btn1">Download</a>
+              <button class="btn botao" id="19" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/bv000136.pdf" class="btn btn1">Download</a>
             </div>
           </div>
         </div>
-
+        <!-- Livro a dama das cemelias -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mt-3 estrangeiro">
+          <div class="card">
+            <img src="../img/ADamadasCamélias .png" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">A dama das Camélias</h5>
+              <p class="card-text">Alexandre Dumas</p>
+              <p class="card-text">Literatura Estrangeira, Livro Antigo</p>
+              <button class="btn botao" id="20" data-bs-toggle="modal" data-bs-target="#modaldv">Ver mais...</button>
+              <a href="http://www.dominiopublico.gov.br/download/texto/ua00006a.pdf" class="btn btn1">Download</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+
     <!-- MODAL -->
     <div class="modal" tabindex="-1" id="modaldv" data-bs-backdrop="static">
       <div class="modal-dialog modal-md modal-dialog-centered">
@@ -379,9 +376,6 @@
       </div>
     </div>
   </main>
-
-
-
 
 
 
