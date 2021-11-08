@@ -65,106 +65,77 @@ function consultaCEP() {
   }
 }
 
-//Validação de campos formulário
-function enviardados() {
-  if (document.form1.nome.value == '' || document.form1.nome.value.length < 3) {
-    alert('Preencha campo Nome corretamente!');
-    //propriedade focus setar para o input nome caso não seja preeenchido
-    document.form1.nome.focus();
-    //O Return false evita laço de repetição e perda da prorpiedade focus
-    return false;
-  }
-  if (
-    document.form1.txEmail.value == '' ||
-    document.form1.txEmail.value.length < 3
-  ) {
-    alert('Preencha campo E-mail corretamente!');
-    document.form1.txEmail.focus();
-    return false;
-  }
-  if (
-    document.form1.txSenha.value == '' ||
-    document.form1.txSenha.value.length < 3
-  ) {
-    alert('Preencha campo Senha corretamente!');
-    document.form1.txSenha.focus();
-    return false;
-  }
-  if (
-    document.form1.txTelefone.value == '' ||
-    document.form1.txTelefone.value.length < 10
-  ) {
-    alert('Preencha campo Telefone corretamente!');
-    document.form1.txTelefone.focus();
-    return false;
-  }
-  if (
-    document.form1.txCPF.value == '' ||
-    document.form1.txCPF.value.length < 5
-  ) {
-    alert('Preencha campo CPF corretamente!');
-    document.form1.txCPF.focus();
-    return false;
-  }
+//Validando os  campos formulário de cadastro
+function validadados() {
 
-  if (
-    document.form1.txCep.value == '' ||
-    document.form1.txCep.value.length < 7
-  ) {
-    alert('Preencha o  campo CEP corretamente!');
-    document.form1.txCep.focus();
-    return false;
-  }
-  //   if (
-  //     document.form1.txUsuario.value == '' ||
-  //     document.form1.txUsuario.value.length < 3
-  //   ) {
-  //     alert('Preencha campo Usuário corretamente!');
-  //     document.form1.txUsuario.focus();
-  //     return false;
-  //   }
+    if (document.formCadastro.nomeCompleto.value == "" || document.formCadastro.nomeCompleto.value.length < 4) {
+        alert("Informe um nome válido");
+        //propriedade focus setar para o input nome caso não seja preeenchido
+        document.formCadastro.nomeCompleto.focus();
+        //O Return false evita laço de repetição e perda da prorpiedade focus
+        return false;
+    }
 
-  //   if (document.form1.txDataNascimento.value == '') {
-  //     alert('Preencha campo Data de Nascimento corretamente!');
-  //     document.form1.txDataNascimento.focus();
-  //     return false;
-  //   }
+    if (document.formCadastro.email.value == "" || document.formCadastro.email.value.length < 10) {
+        alert("Informe um E-mail válido");
+        document.formCadastro.email.focus();
+        return false;
+    }
+    if (document.formCadastro.senha.value == "" || document.formCadastro.senha.value.length < 3) {
+        alert("Informe uma senha");
+        document.formCadastro.senha.focus();
+        return false;
+    }
+ 
+     if (document.formCadastro.telefone.value == "" || document.formCadastro.telefone.value.length < 10) {
+        alert("Informe um telefone válido");
+        document.formCadastro.telefone.focus();
+        return false;
+    }
+ 
+    if (document.formCadastro.cpf.value == "" || document.formCadastro.cpf.value.length < 5) {
+        alert("Informe um CPF válido");
+        document.formCadastro.cpf.focus();
+        return false;
+    }
 
-  if (
-    document.form1.logradouro.value == '' ||
-    document.form1.logradouro.value.length < 5
-  ) {
-    alert('Preencha o campo Endereço corretamente!');
-    document.form1.logradouro.focus();
-    return false;
-  }
-  //   if (
-  //     document.form1.txNumero.value == '' ||
-  //     document.form1.txNumero.value.length < 2
-  //   ) {
-  //     alert('Preencha o campo Número corretamente!');
-  //     document.form1.txNumero.focus();
-  //   }
-  //   if (
-  //     document.form1.complemento.value == '' ||
-  //     document.form1.complemento.value.length < 1
-  //   ) {
-  //     alert('Preencha o campo Complemento corretamente!');
-  //     document.form1.complemento.focus();
-  //   }
-  if (document.form1.uf.value == '' || document.form1.uf.value.length < 3) {
-    alert('Preencha o campo Estado corretamente!');
-    document.form1.uf.focus();
-    return false;
-  }
-  if (
-    document.form1.localidade.value == '' ||
-    document.form1.localidade.value.length < 3
-  ) {
-    alert('Preencha o campo Cidade corretamente!');
-    document.form1.localidade.focus();
-    return false;
-  }
+    if (document.formCadastro.cep.value == "" || document.formCadastro.cep.value.length < 7) {
+        alert("Informe um CEP válido");
+        document.formCadastro.cep.focus();
+        return false;
+    }
+    if (document.formCadastro.logradouro.value == "" || document.formCadastro.logradouro.value.length < 5) {
+        alert("Informe um endereço válido");
+        document.form.logradouro.focus();
+        return false;
+    }
+    if (document.formCadastro.bairro.value == "" || document.formCadastro.bairro.value.length < 4) {
+        alert("Informe um bairro válido");
+        document.form.bairro.focus();
+        return false;
+    }
+    if (document.formCadastro.numero.value == "" || document.formCadastro.numero.value.length < 2) {
+        alert("Informe um número válido");
+        document.formCadastro.numero.focus();
+        return false;
+    }
+ 
+    if (document.formCadastro.uf.value == "" || document.formCadastro.uf.value.length < 2) {
+        alert("Informe um estado válido");
+        document.formCadastro.uf.focus();
+        return false;
+    }
+    if (document.formCadastro.localidade.value == "" || document.formCadastro.localidade.value.length < 5) {
+        alert("Informe uma cidade válida");
+        document.formCadastro.localidade.focus();
+        return false;
+    }
+
+    {
+      alert("Cadastro Concluido - Bem Vindo a OpenBook!");
+    }
+}
+
 
   //   if (!document.querySelector('[name="rdSexo"]:checked')) {
   //     alert('Selecione o sexo ao qual vocês se identifica, corretamente!');
@@ -177,7 +148,14 @@ function enviardados() {
   //     return false;
   //   }
 
-  {
-    alert('Cadastro realizado com sucesso!');
-  }
-}
+$('#buttonLogin').click(function () {
+  $('#formCadastrar').hide();
+  $('#formLogin').show();
+  document.mensagem.hide;
+});
+$('#buttonCadastro').click(function () {
+  $('#formLogin').hide();
+  $('#formCadastrar').show();
+  document.mensagem.hide;
+});
+
