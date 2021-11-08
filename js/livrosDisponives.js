@@ -47,7 +47,7 @@ for (let i = 0; i < x.length; i++) {
     x[i].addEventListener("click", function () {
         //o if irá verificar se o id de determinado botão acionado corresponde ao codigo do array que declaramos acima (linha 1)
         if (Number(x[i].id) === livros[i].codigo) {
-            alert(x[i].id);
+            // alert(x[i].id);
             //se a condição do if for verdadeira irá acrescentar no meu id="livro" o nome do livro que foi estabelecido no objeto acima (linha 1)
             document.getElementById("livro").innerText = livros[i].nome;
             document.getElementById("nomeAutor").innerText = livros[i].resumo;
@@ -55,13 +55,14 @@ for (let i = 0; i < x.length; i++) {
         }
     });
 }
-$('#linkNacional').click(function () {
-    $('.estrangeiro').hide();
-    $(".nacional").show()
-    // $('.livrosDisponiveis').hide()
-    // $('lNacional').innerHTML += `<h1>Literatura Nacional</h1>`;
-});
-$('#linkEstrangeiro').click(function () {
-    $('.nacional').hide();
-    $(".estrangeiro").show()
-});
+// Tentativa de filtro utilizando o jquery, no futuro pensaremos em algo para solucionar o problema
+// $('#linkNacional').click(function () {
+//     $('.estrangeiro').hide();
+//     $(".nacional").show()
+//     // $('.livrosDisponiveis').hide()
+//     // $('lNacional').innerHTML += `<h1>Literatura Nacional</h1>`;
+// });
+// $('#linkEstrangeiro').click(function () {
+//     $('.nacional').hide();
+//     $(".estrangeiro").show()
+// });
