@@ -1,73 +1,69 @@
 //Verifica se CPF é válido
 function _cpf(cpf) {
-    cpf = cpf.replace(/[^\d]+/g, '');
-    if (cpf == '') return false;
-    if (cpf.length != 11 ||
-        cpf == "00000000000" ||
-        cpf == "11111111111" ||
-        cpf == "22222222222" ||
-        cpf == "33333333333" ||
-        cpf == "44444444444" ||
-        cpf == "55555555555" ||
-        cpf == "66666666666" ||
-        cpf == "77777777777" ||
-        cpf == "88888888888" ||
-        cpf == "99999999999")
-        return false;
-    add = 0;
-    for (i = 0; i < 9; i++)
-        add += parseInt(cpf.charAt(i)) * (10 - i);
-    rev = 11 - (add % 11);
-    if (rev == 10 || rev == 11)
-        rev = 0;
-    if (rev != parseInt(cpf.charAt(9)))
-        return false;
-    add = 0;
-    for (i = 0; i < 10; i++)
-        add += parseInt(cpf.charAt(i)) * (11 - i);
-    rev = 11 - (add % 11);
-    if (rev == 10 || rev == 11)
-        rev = 0;
-    if (rev != parseInt(cpf.charAt(10)))
-        return false;
-    return true;
+  cpf = cpf.replace(/[^\d]+/g, '');
+  if (cpf == '') return false;
+  if (
+    cpf.length != 11 ||
+    cpf == '00000000000' ||
+    cpf == '11111111111' ||
+    cpf == '22222222222' ||
+    cpf == '33333333333' ||
+    cpf == '44444444444' ||
+    cpf == '55555555555' ||
+    cpf == '66666666666' ||
+    cpf == '77777777777' ||
+    cpf == '88888888888' ||
+    cpf == '99999999999'
+  )
+    return false;
+  add = 0;
+  for (i = 0; i < 9; i++) add += parseInt(cpf.charAt(i)) * (10 - i);
+  rev = 11 - (add % 11);
+  if (rev == 10 || rev == 11) rev = 0;
+  if (rev != parseInt(cpf.charAt(9))) return false;
+  add = 0;
+  for (i = 0; i < 10; i++) add += parseInt(cpf.charAt(i)) * (11 - i);
+  rev = 11 - (add % 11);
+  if (rev == 10 || rev == 11) rev = 0;
+  if (rev != parseInt(cpf.charAt(10))) return false;
+  return true;
 }
 function validarCPF(el) {
-    if (!_cpf(el.value)) {
-        alert("CPF inválido!" + el.value);
-        // apaga o valor
-        el.value = "";
-    }
+  if (!_cpf(el.value)) {
+    alert('CPF inválido!' + el.value);
+    // apaga o valor
+    el.value = '';
+    document.form1.txCPF.focus();
+    return false;
+  }
 }
 
-const apresentaDados = (resultado) => {
-    for (let campo in resultado) {
-        if (document.querySelector("#" + campo)) {
-            console.log(campo);
-            document.querySelector("#" + campo).value = resultado[campo]
-        }
+const apresentaDados = resultado => {
+  for (let campo in resultado) {
+    if (document.querySelector('#' + campo)) {
+      console.log(campo);
+      document.querySelector('#' + campo).value = resultado[campo];
     }
-}
+  }
+};
 
 function consultaCEP() {
-    let cepDigitado = document.getElementById("cep");
+  let cepDigitado = document.getElementById('cep');
 
-    if (cepDigitado.value == "") {
-        cepDigitado.style.border = "1px solid red";
-    } else {
-        //tira o que tá no primeiro parâmetro e insere o que está no segundo. Nessa situação o - do CEP é apagado, caso retirado
-        let cepProcurado = cepDigitado.value.replace("-", "");
-        console.log(cepProcurado);
+  if (cepDigitado.value == '') {
+    cepDigitado.style.border = '1px solid red';
+  } else {
+    //tira o que tá no primeiro parâmetro e insere o que está no segundo. Nessa situação o - do CEP é apagado, caso retirado
+    let cepProcurado = cepDigitado.value.replace('-', '');
+    console.log(cepProcurado);
 
-        fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
-            .then(response => {
-                response.json()
-                    .then(data => console.log(apresentaDados(data)));
-            })
-            .catch(x => console.log("CEP não encontrado!!"));
-    }
+    fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
+      .then(response => {
+        response.json().then(data => console.log(apresentaDados(data)));
+      })
+      .catch(x => console.log('CEP não encontrado!!'));
+  }
 }
-
 
 //Validando os  campos formulário de cadastro
 function validadados() {
@@ -140,6 +136,17 @@ function validadados() {
     }
 }
 
+
+  //   if (!document.querySelector('[name="rdSexo"]:checked')) {
+  //     alert('Selecione o sexo ao qual vocês se identifica, corretamente!');
+  //     return false;
+  //   }
+  //   if (!document.querySelector('[name="ckFuncao"]:checked')) {
+  //     alert(
+  //       'Selecione as habilidades corespondentes aos seu perfil corretamente!'
+  //     );
+  //     return false;
+  //   }
 
 $('#buttonLogin').click(function () {
   $('#formCadastrar').hide();

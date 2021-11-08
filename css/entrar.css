@@ -51,15 +51,19 @@
   background-color: #3b89ff;
   color: #fff;
 }
-main{
+main {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+
 /* .span_class{
   background-color: #ffaa00;
   color: white;
   font-weight: bold;
   font-size: small;
+}
+legend {
+  color: #032a66;
 } */
 legend{
   color:#032a66;
@@ -83,5 +87,4 @@ footer{
   padding: 25px 0;
   color:#032a66;
 }
-
 

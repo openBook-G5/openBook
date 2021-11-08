@@ -27,198 +27,180 @@
     ></script>
     <title>Entrar</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg estiloNav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"
-          ><img class="logo" src="../img/logo.png"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list icons2"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="quemSomos.html">Quem somos nós?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="meusFavoritos.html">Meus Favoritos</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="livrosDisponiveis.html"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Livros
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Todos</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Literatura Nacional</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Literatura Estrangeira</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <button class="bi bi-box-arrow-in-right fs-5 m-2 btn btn1">
-              Entrar
-              
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- CONTEUDO PRINCIPAL -->
-    <main>
-      <!-- conteudo da pagina que está no google docs -->
-      <div class="botoes mx-2 mt-3 mb-2 text-center"> 
-        <p>
-        <button class="btn btn1" id="buttonLogin" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleEntrar" aria-expanded="false" aria-controls="collapseExample" >Minha Conta</button>
-        <button class="btn btn1" id="buttonCadastro" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExampleCadastrar" aria-expanded="false" aria-controls="collapseExample">
-                   Quero me Cadastrar  </button> 
-        </p>
-      </div>
-
-        <div class="collapse" id="collapseExampleEntrar">
-            <div class="container w-25" id="formLogin"> 
-              <legend class="text-center">Acessar Minha Conta</legend>
-                <form action="#" method="POST" >
-                  <div class="col">
-                    <input type="email" class="form-control mt-3" id="InputEmail" placeholder="Informe seu e-mail" title="Informe o e-mail cadastrado" required/>
-                  </div>
-                  <div class="col">
-                    <input type="password" class="form-control mt-3" id="InputSenha" placeholder="Informe sua senha" title="Informe a senha cadastrada" required/>
-                  </div>
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn1 mx-3 mt-3">Login</button>
-                  </div>
-                </form>
-              </div>
-        </div>
-        <!-- <h3 class="mensagem"> Acesse sua conta: <br>Tenha em mãos este grande acervo</h3> -->
-
-        <div class="collapse" id="collapseExampleCadastrar">
-          <div class="container w-50" id="formCadastrar">
-            <legend class="text-center fs-3">Formulário de Cadastro</legend>
-            <form action="#" method="POST"name="formCadastro" class="col-lg-12 col-md-12 col-sm-12" onsubmit="return validadados();">
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="nomeCompleto" required minlength="10" placeholder="Informe seu nome completo">
-              </div>
-              <div class="col">
-                <input type="email" class="form-control mt-3" id="email" required placeholder="Informe seu email">
-              </div>
-              <div class="col">
-                <!-- <div class="input-group">
-                  <span class="input-group-text span_class"></span> -->
-                  <input type="password" class="form-control mt-3" id="senha" required placeholder="Informe uma senha">
-                <!-- </div> -->
-              </div>
-              <div class="col">
-                <input type="tel"  class="form-control mt-3" id="telefone" required maxlength="15" placeholder="(DD) XXXXX.XXXX">
-              </div>
-              <div>
-                <input type="text" class="form-control mt-3" id="cpf" maxlength="14" onblur="return validarCPF(this)" placeholder="XXX.XXX.XXX-XX" >
-              </div>
-              <div class="col">
-                <input type="text"  class="form-control mt-3" id="cep" maxlength="9" onblur="consultaCEP()" placeholder="XXXXX-XXX">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="logradouro"  placeholder="Rua">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="numero"  placeholder="Número">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="bairro" placeholder="Bairro">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="uf" maxlength="2"  placeholder="UF">
-              </div>    
-              <div class="col">
-                <input type="text" class="form-control mt-3" id="localidade"  placeholder="Cidade">
-              </div>   
-              <div class="col mt-3 text-end">
-                <button type="submit" class="btn btn3" onclick="validadados()" value="Exibir Alert">Enviar</button>
-                <button type="reset" class="btn btn3">Limpar</button>
-              </div>           
-            </form>
-         </div>      
-        </div>
-
-   
-    </main>
-    <!-- Footer -->
-    <div class="container-fluid justify-content-around d-flex">
-      <footer class="py-5">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 text-center px-4">
-            <h5>openBook</h5>
-            <ul class="nav flex-column mb-4">
-              <li class="nav-item mb-2">
-                <a href="../index.html" class="nav-link p-0 text-muted">Home</a>
+<body>
+  <nav class="navbar navbar-expand-lg estiloNav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.png" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list icons2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quemSomos.html">Quem somos nós?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="meusFavoritos.html">Meus Favoritos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="livrosDisponiveis.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Livros
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="livrosDisponiveis.html">Todos</a>
               </li>
-              <li class="nav-item mb-2">
-                <a href="quemSomos.html" class="nav-link p-0 text-muted"
-                  >Quem somos nós?</a
-                >
+              <li>
+                <hr class="dropdown-divider" />
               </li>
-              <li class="nav-item mb-2">
-                <a href="meusFavoritos.html" class="nav-link p-0 text-muted"
-                  >Meus Favoritos</a
-                >
+              <li>
+                <a class="dropdown-item" href="livrosNacionais.html">Literatura Nacional</a>
               </li>
-              <li class="nav-item mb-2">
-                <a href="livrosDisponiveis.html" class="nav-link p-0 text-muted"
-                  >Livros</a
-                >
+              <li>
+                <hr class="dropdown-divider" />
               </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"></a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted"
-                  >Politica de Privacidade</a
-                >
+              <li>
+                <a class="dropdown-item" href="livrosEstrangeiros.html">Literatura Estrangeira</a>
               </li>
             </ul>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-            <form>
-              <h5>Inscreva-se para receber a nossa newsletter</h5>
-              <div class="d-flex w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">Email</label>
-                <input
-                  id="newsletter1"
-                  type="text"
-                  class="form-control"
-                  placeholder="exemplo@mail.com"
-                />
-                <button class="btn btn1" type="button">Cadastrar</button>
-              </div>
-            </form>
-          </div>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        <div class="d-flex">
+          <a href="entrar.html">
+            <button class="bi bi-box-arrow-in-right fs-5 m-2 btn btn1">
+              Entrar
+            </button></a
+          >
         </div>
+      </div>
+    </div>
+  </nav>
+  <!-- CONTEUDO PRINCIPAL -->
+  <main>
+    <!-- conteudo da pagina que está no google docs -->
+    <div class="botoes mx-2 mt-3 mb-2 text-center">
+      <p>
+        <button class="btn btn1" id="buttonLogin" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExampleEntrar" aria-expanded="false" aria-controls="collapseExample">Minha
+          Conta</button>
+        <button class="btn btn1" id="buttonCadastro" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExampleCadastrar" aria-expanded="false" aria-controls="collapseExample">Quero me
+          Cadastrar</button>
+      </p>
+    </div>
 
+    <div class="collapse" id="collapseExampleEntrar">
+      <!-- <div class="card card-body"> -->
+      <!-- <form class="container-fluid justify-content-around d-flex"> -->
+      <div class="container w-25">
+        <legend class=" text-center">Acessar Minha Conta</legend>
+        <form>
+          <div class="col">
+            <input type="email" class="form-control mt-3" id="txEmail" placeholder="Informe seu e-mail"
+              title="Informe o e-mail cadastrado" required />
+          </div>
+          <div class="col">
+            <input type="password" class="form-control mt-3" id="txSenha" placeholder="Informe sua senha"
+              title="Informe a senha cadastrada" required />
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn1 mx-3 mt-3">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="collapse" id="collapseExampleCadastrar">
+      <div class="container w-50">
+        <legend class="text-center fs-3">Formulário de Cadastro</legend>
+        <form name="form1" id="form1">
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="nome" name="nome" 
+              placeholder="Informe seu nome completo">
+          </div>
+          <div class="col">
+            <input type="email" class="form-control mt-3" id="email" required placeholder="Informe seu email">
+          </div>
+          <div class="col">
+            <input type="password" class="form-control mt-3" id="senha" required placeholder="Informe senha">
+          </div>
+          <div class="col">
+            <input type="tel" class="form-control mt-3" id="telefone" maxlength="15" placeholder="(DD) XXXXX.XXXX">
+          </div>
+          <div>
+            <input type="text" class="form-control mt-3" id="cpf" maxlength="14" onblur="validarCPF(this)"
+              placeholder="XXX.XXX.XXX-XX">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="cep" maxlength="9" onblur="consultaCEP()"
+              placeholder="XXXXX-XXX">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="logradouro" required placeholder="Rua e número">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="bairro" required placeholder="Bairro">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="localidade" required placeholder="Cidade">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control mt-3" id="uf" required placeholder="UF">
+          </div>
+          <div class="col text-end">
+            <button type="submit" class="btn btn3" onclick="enviardados()" value="Exibir Alert">Enviar</button>
+            <button type="reset" class="btn btn3">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+  <!-- FOOTER -->
+  <div class="container-fluid border-top">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center px-4">
+          <h5>openBook</h5>
+          <ul class="nav flex-column mb-4">
+            <li class="nav-item mb-2">
+              <a href="index.html" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="html/quemSomos.html" class="nav-link p-0 text-muted">Quem somos nós?</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="html/meusFavoritos.html" class="nav-link p-0 text-muted">Meus Favoritos</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="html/livrosDisponiveis.html" class="nav-link p-0 text-muted">Livros</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Politica de Privacidade</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+          <!-- <form class="d-flex justify-content-center flex-column"> -->
+          <form class="d-flex flex-column justify-content-center">
+            <h5>Inscreva-se para receber a nossa newsletter</h5>
+            <div class="d-flex gap-3">
+              <label for="newsletter1" class="visually-hidden">Email</label>
+              <input id="newsletter1" type="text" class="form-control w-75" placeholder="exemplo@mail.com" />
+              <button class="btn btn1" type="button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
         <div class="d-flex justify-content-between py-4 my-4 border-top">
           <p>&copy; 2021 openBook. Todos os direitos reservados.</p>
           <ul class="list-unstyled d-flex">
@@ -233,9 +215,16 @@
             </li>
           </ul>
         </div>
-      </footer>
-    </div>
-
+      </div>
+    </footer>
+  </div>
+  <!--JS e JQuery do Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--JS-->
+  <script type="text/javascript" src="../js/entrar.js"></script>
+</body>
   
   <!-- Inserindo VLibras -->
   <div vw class="enabled">
@@ -260,3 +249,4 @@
     <script type="text/javascript" src="../js/entrar.js"></script>
   </body>
 </html>
+
