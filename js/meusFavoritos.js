@@ -39,9 +39,10 @@ class meusFavoritos {
         console.log(livro);
         this.atualizarEdicao(this.editCodigo);
       }
+      this.criarTabela();
+      this.cancelar();
     }
-    this.criarTabela();
-    this.cancelar();
+
     console.log(this.arrayLivros);
   }
 

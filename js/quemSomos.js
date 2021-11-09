@@ -1,3 +1,4 @@
+// função para animar o gif da bibliotecária
 $(document).ready(function () {
   $('#animation').click(function () {
     $('#animation').animate(
