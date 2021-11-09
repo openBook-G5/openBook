@@ -139,6 +139,8 @@ function validadados() {
 
   {
     alert('Cadastro Concluido - Bem Vindo a OpenBook!');
+
+    // limpa os campos do formulario qdo ele retorna a tela fica limpa
     document.formCadastro.nomeCompleto.value = '';
     document.formCadastro.email.value = '';
     document.formCadastro.senha.value = '';
@@ -153,6 +155,8 @@ function validadados() {
   }
 }
 
+// // função para esconder e mostrar os dois forms qdo
+// acionado os botoes atraves do collapse
 $('#buttonLogin').click(function () {
   $('#formCadastrar').hide();
   $('#formLogin').show();

@@ -25,6 +25,7 @@
       type="text/Javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     ></script>
+    <!-- Formulario de cadastro chamado pelo botao Entrar do Menu -->
     <title>Entrar</title>
   </head>
 
@@ -103,11 +104,12 @@
     <!-- CONTEUDO PRINCIPAL -->
     <main class="mb-3">
       <!-- conteudo da pagina que está no google docs -->
-
+<!-- Chama a imagem principal do formulario  -->
       <div>
         <img class="d-block w-100" src="../img/img-formulario.jpeg" />
       </div>
-
+<!-- criado dois botoes para chamar os dois forms, o de login - minha conta e o de cadastro - Quero me cadastrar.
+   Usado o evento  collapse para esconder os forms através dos botões -->
       <div class="botoes mx-2 mt-3 mb-2 text-center">
         <p>
           <button
@@ -208,6 +210,7 @@
               />
             </div>
             <div>
+<!-- chama a função validarCPF para validar o CPF -->
               <input
                 type="text"
                 class="form-control mt-3"
@@ -218,6 +221,8 @@
               />
             </div>
             <div class="col d-md-flex">
+<!-- chama a funçao consultaCEP para validação do CEP e trazer 
+  os campos de endereços automatico  para os campos -->
               <input
                 type="text"
                 class="form-control mt-3"
@@ -228,6 +233,8 @@
                 placeholder="Informe seu CEP: XXXXX-XXX"
                 required
                  />
+<!-- Chama a função de consulta de cep no site dos correios, abre uma
+ outra  janela, que não interfere no funcionamento desta pagina -->
                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="self">
                <img src="../img/correios.jpg" class="rounded float-end mt-3" id="img2" alt="..."></a>
             </div>      
@@ -273,6 +280,8 @@
               />
             </div>
             <div class="col mt-3 text-end">
+<!-- cria o botao Enviar tipo button devido ao uso da 
+  função validaDados no onclick -->
               <button
                 type="button"
                 class="btn btn3"
@@ -281,6 +290,7 @@
               >
                 Enviar
               </button>
+<!-- cria o botao Limpar tipo reset -->
               <button type="reset" class="btn btn3">Limpar</button>
             </div>
           </form>
