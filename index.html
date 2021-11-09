@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- imagem que aparece no titulo da aba -->
     <link rel="shortcut icon" href="img/book1.png" />
     <!--Bootstrap -->
     <link
@@ -28,11 +29,16 @@
     <title>Início</title>
   </head>
   <body>
+    <!-- navegador - comum em todas as páginas -->
+    <!-- utilizado o navbar retirado direto da documentação do site no bootstrap -->
+
     <nav class="navbar navbar-expand-lg estiloNav">
       <div class="container-fluid">
+        <!-- utilizando a logo como link para página principal -->
         <a class="navbar-brand" href="index.html"
           ><img class="logo" src="img/logo.png"
         /></a>
+        <!-- botão toggle que aparecerá quando minimizar a tela -->
         <button
           class="navbar-toggler"
           type="button"
@@ -42,8 +48,10 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
+          <!-- icone de hamburger -->
           <i class="bi bi-list icons2"></i>
         </button>
+        <!-- declaração  da lista do nav-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -70,6 +78,7 @@
               >
                 Livros
               </a>
+              <!-- menu dropdown -->
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <a class="dropdown-item" href="html/livrosDisponiveis.html"
@@ -106,6 +115,7 @@
       </div>
     </nav>
     <!-- HEADER - BANNER -->
+    <!-- banner rotativo usando a flecha e pelo timer -->
     <header>
       <div
         id="carouselExampleInterval"
@@ -114,16 +124,32 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="6000">
-            <img class="d-block w-100" src="img/b1-gif.gif" alt="" />
+            <img
+              class="d-block w-100"
+              src="img/b1-gif.gif"
+              alt="banner interativo de saudação"
+            />
           </div>
           <div class="carousel-item" data-bs-interval="6000">
-            <img class="d-block w-100" src="img/b2-gif.gif" alt="" />
+            <img
+              class="d-block w-100"
+              src="img/b2-gif.gif"
+              alt="banner interativo: baixe livros em PDF de forma simples"
+            />
           </div>
           <div class="carousel-item" data-bs-interval="6000">
-            <img class="d-block w-100" src="img/b3-gif.gif" alt="" />
+            <img
+              class="d-block w-100"
+              src="img/b3-gif.gif"
+              alt="banner interativo página meus favoritos"
+            />
           </div>
           <div class="carousel-item" data-bs-interval="6000">
-            <img class="d-block w-100" src="img/b4-gif.gif" alt="" />
+            <img
+              class="d-block w-100"
+              src="img/b4-gif.gif"
+              alt="banner interativo da página de cadastro"
+            />
           </div>
         </div>
         <button
@@ -146,21 +172,14 @@
         </button>
       </div>
     </header>
-
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
     <main>
-      <!-- Adicionando o VLibras -->
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+      <!-- os quatros principais benefícios divididos em 4 colunas na mesma linha  -->
+      <!-- div declarada como container-fluid, ocupa 100% da tela -->
       <div class="container-fluid">
+        <!-- declaração da primeira linha, texto centralizado -->
         <div class="row text-center">
+          <!-- declaração da coluna, em tamanho grande ocupação de 3 espaços, em tamanho médio ocupação de metade do espaço e em tamanho pequeno ocupação de todo o espaço -->
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -171,10 +190,12 @@
               pt-3
             "
           >
+            <!-- icone -->
             <span class="bi bi-hand-index-thumb"></span>
-
+            <!-- palavra em negrito -->
             <p class="fw-bold">INTUITIVO</p>
           </div>
+          <!-- declaração da coluna, em tamanho grande ocupação de 3 espaços, em tamanho médio ocupação de metade do espaço e em tamanho pequeno ocupação de todo o espaço -->
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -185,9 +206,12 @@
               pt-3
             "
           >
+            <!-- icone -->
             <span class="bi bi-download"></span>
+            <!-- palavra em negrito -->
             <p class="fw-bold">RÁPIDO</p>
           </div>
+          <!-- declaração da coluna, em tamanho grande ocupação de 3 espaços, em tamanho médio ocupação de metade do espaço e em tamanho pequeno ocupação de todo o espaço -->
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -198,9 +222,12 @@
               pt-3
             "
           >
+            <!-- icone -->
             <span class="bi bi-lock"></span>
+            <!-- palavra em negrito -->
             <p class="fw-bold">SEGURO</p>
           </div>
+          <!-- declaração da coluna, em tamanho grande ocupação de 3 espaços, em tamanho médio ocupação de metade do espaço e em tamanho pequeno ocupação de todo o espaço -->
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -211,24 +238,32 @@
               pt-3
             "
           >
+            <!-- icone -->
             <span class="bi bi-book"></span>
+            <!-- palavra em negrito -->
             <p class="fw-bold">VARIEDADE</p>
           </div>
         </div>
       </div>
+      <!-- container ocupando 80% da tela e com padding de tamanho 2 -->
       <div class="container p-2">
+        <!-- começo da linha -->
         <div class="row my-5">
+          <!-- coluna -->
           <div class="col p-5">
+            <!-- titulo principal -->
             <h1 class="text-center tituloAzul">
               GRATUITO, EDUCATIVO E PÚBLICO.
             </h1>
+            <!-- sub-título -->
             <h2 class="text-center fw-bold fst-italic tituloAzul">
               OPENCULTURA, OPENBOOK.
             </h2>
           </div>
         </div>
-
+        <!-- linha -->
         <div class="row mb-5">
+          <!-- resumo da página centralizado -->
           <p class="text-center">
             Todos os livros têm como fonte sites do governo federal cuja
             distribuição para uso não comercial é legal. Nossa solução não
@@ -243,9 +278,12 @@
           </p>
         </div>
         <hr />
+        <!-- linha -->
         <div class="row mb-5">
           <!-- confira os destaques / alguns cards / animações-->
           <h2 class="text-center p-5 fw-bolder tituloAzul">Destaques</h2>
+          <!-- card - livro 01 -->
+
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -268,6 +306,8 @@
               </div>
             </div>
           </div>
+          <!-- card - livro 02 -->
+
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -293,6 +333,8 @@
               </div>
             </div>
           </div>
+          <!-- card - livro 03 -->
+
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -315,6 +357,8 @@
               </div>
             </div>
           </div>
+          <!-- card - livro 04 -->
+
           <div
             class="
               col-lg-3 col-md-6 col-sm-12
@@ -339,6 +383,7 @@
           </div>
         </div>
         <hr />
+        <!-- linha -->
         <div class="row mb-5">
           <!-- curiosidades sobre os autores / alguns cards / animações-->
           <h2 class="text-center p-5 tituloAzul">Fatos sobre os autores</h2>
@@ -431,6 +476,7 @@
           </div>
         </div>
         <hr />
+        <!-- linha domínio público -->
         <div class="row mb-5">
           <h2 class="text-center p-5 tituloAzul">Domínio Público</h2>
           <div class="col-lg-6 col-md-6 col-sm-12">
@@ -549,7 +595,17 @@
         </div>
       </footer>
     </div>
-
+    <!-- Adicionando o VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <!--JS e JQuery do Bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

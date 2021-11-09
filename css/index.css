@@ -1,14 +1,12 @@
+/* importando a fonte */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap%27');
+
+/* estilização root */
 * {
   font-family: 'roboto';
 }
 
-p {
-  font-size: 1.3rem;
-}
-.beneficios p {
-  font-size: 1rem;
-}
+/* estilização do main e do footer */
 .logo {
   width: 230px;
 }
@@ -43,6 +41,13 @@ p {
 }
 .icons:hover {
   color: #c48200;
+}
+/* estilização do main */
+p {
+  font-size: 1.3rem;
+}
+.beneficios p {
+  font-size: 1rem;
 }
 .iconsProjetos {
   font-size: 1rem;
